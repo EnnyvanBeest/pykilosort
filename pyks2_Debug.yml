@@ -1,0 +1,37 @@
+# NOTE: Additonal dependencies may need to be added to pyks2_test.yml as well if 
+# they are required for pykilosort or the tests.
+
+
+name: pyks2_debug
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+ - spyder # conda install
+ #- python >= 3.8, <3.11  # numba currently doesn't support 3.11
+ - ipython # conda install - already installed
+ - scipy # conda install - 
+ - numpy # conda install
+  # Cupy needs some thought on whether to pin and/or which version to pin.
+ # It may be hard to get a version that works for a good range of hardware.
+ - cupy >= 9 #Conda install -c conda-forge cupy
+ - cudatoolkit = 11.5 # conda install -c conda-forge cudatoolkit=11.5
+ - matplotlib # Conda install
+ - tqdm # Conda install
+ - click # conda install - already existed
+ - pydantic # conda install
+ - pytest # conda install
+ - pytest-cov #conda install
+ - mock # conda install
+ - pip # conda install - already installed
+ - pyqtgraph # conda install
+ - pyqt # conda install already installed
+ #- nbconvert # conda install
+ - pip:
+  #- pyqt5-tools 
+    - phylib
+    - pyfftw
+    - spikeinterface
+    - ibllib
+    - numba # already installed
+    #- matlab
